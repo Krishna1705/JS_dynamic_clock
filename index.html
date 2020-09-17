@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DYNAMIC CLOCK (setInterval()) </title>
+</head>
+<body>
+   <h1 id="timeid" style="color:rebeccapurple;"></h1>
+
+   <button onclick="stopclock()">Stop Clock</button>
+</body>
+<script type="text/javascript">
+   /* var d= new Date()
+    console.log(d)
+
+   // console.log(d.getTime());//Returns time in milliseconds since 1/1/1970
+    a=d.getDate();
+    b=d.getMonth()+1;
+    c=d.getFullYear();
+
+   // document.write(" Today's Date is: "+a+"/"+b+"/"+c);
+
+    document.write("<br>");
+    e=d.getHours();
+    f=d.getMinutes();
+    g=d.getSeconds();
+
+   // document.write(" Current Time is: "+e+":"+f+":"+g);
+   
+   document.getElementById("dateid").innerHTML=" Today's Date is: "+a+"/"+b+"/"+c;
+   document.getElementById("timeid").innerHTML="Current Time is: "+e+":"+f+":"+g;
+
+   */
+
+  /* localtime=d.toLocaleTimeString();
+   console.log(localtime);*/
+
+var showtime = setInterval(clocktiming,1000);
+   
+function clocktiming(){
+    var d= new Date()
+    var time=d.toLocaleTimeString()//returns localtime in PM OR AM
+    document.getElementById("timeid").innerHTML=time;
+   }
+
+function stopclock(){
+    clearInterval(showtime);
+   }
+ </script>
+</html>
